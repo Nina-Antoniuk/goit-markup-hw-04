@@ -1,0 +1,35 @@
+div.conteiner > ul.box > (li.box-item) * 6
+:root {
+
++  --gap: 20px;
+}
+
++ .conteiner {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
++ .box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc( -1 * var(--gap));
+  margin-left: calc( -1 * var(--gap));
+
+}
+
++ .box-item {
+  flex-basis: calc(100% / 3 - 20px);
+  margin-top: var(--gap);
+  margin-left: var(--gap);
+  }
+
+  + img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  } 
+
+-->  + после создания компенсации внутренних марджинов
+ не должна страдать геометрия. Между заголовком и списком не должно
+ ыть прорыва.
